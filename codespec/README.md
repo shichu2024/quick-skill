@@ -3,7 +3,7 @@
 ## 概览
 
 - 项目：quick-skill — AI Skill 全生命周期管理 CLI 工具
-- 当前激活的功能：待选择
+- 当前激活的功能：FEAT-001-skill-diagnose (validating)
 - 最后更新时间：2026-05-07
 
 ## 术语

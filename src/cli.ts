@@ -27,4 +27,17 @@ program
     await createCommand.default(options);
   });
 
+program
+  .command('diagnose')
+  .description('对指定路径的存量技能执行合规性诊断')
+  .argument('<path>', '技能目录路径')
+  .option('--output <path>', '诊断报告输出路径')
+  .option('--fix-auto', '自动修复可标准化的问题')
+  .option('--batch', '批量诊断模式下扫描目录')
+  .option('--filter <type>', '按技能文件类型筛选')
+  .action(async (skillPath, options) => {
+    const diagnoseCommand = await import('./commands/diagnose.js');
+    await diagnoseCommand.default(skillPath, options);
+  });
+
 program.parse(process.argv);

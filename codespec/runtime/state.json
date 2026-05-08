@@ -1,15 +1,15 @@
 {
-  "active_feature": "FEAT-003-skill-create",
-  "active_phase": "done",
+  "active_feature": "FEAT-001-skill-diagnose",
+  "active_phase": "validating",
   "active_dispatch": {
-    "role": "",
-    "story": "",
-    "task": ""
+    "role": "qa",
+    "story": "ST-001",
+    "task": "T-013"
   },
   "resume": {
-    "mode": "idle",
-    "next_role": "pm",
-    "next_action": "FEAT-003-skill-create 已完成，可选择新 feature 或进入 idle 状态"
+    "mode": "active",
+    "next_role": "qa",
+    "next_action": "FEAT-001 所有 task 已完成，进入验证阶段"
   },
   "latest_validation": {
     "story": "",
