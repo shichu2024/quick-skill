@@ -1,4 +1,0 @@
-interface:
-  display_name: "Quick SDD DEV"
-  short_description: "负责 Quick SDD 的单 task 实现、TDD/verify 执行与证据回收"
-  default_prompt: "使用 $quick-sdd-dev 在当前 task 的 write_paths 内完成实现，执行 verify 并回传可供 QA 复核的证据。"

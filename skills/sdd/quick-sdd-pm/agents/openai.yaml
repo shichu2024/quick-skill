@@ -1,4 +1,0 @@
-interface:
-  display_name: "Quick SDD PM"
-  short_description: "负责 Quick SDD 的治理编排、门禁判断、续跑恢复与角色派发"
-  default_prompt: "使用 $quick-sdd-pm 接管当前项目的 SDD 流程，负责任务分拣、状态推进、门禁判断和下一角色派发，不代替其他角色执行主产物。"

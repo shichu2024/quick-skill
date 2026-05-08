@@ -9,10 +9,68 @@
 | T-003 | ST-001 | Skill 使命定义引导步骤 | done | T-001 | dev |
 | T-004 | ST-001 | 触发边界与成功标准引导步骤 | done | T-001 | dev |
 | T-005 | ST-001 | 执行步骤引导步骤 | done | T-001 | dev |
-| T-006 | ST-002 | 交互式编辑模式 | pending | T-001 | dev |
+| T-006 | ST-002 | 交互式编辑模式 | done | T-001 | dev |
 | T-007 | ST-003 | SKILL.md 标准文件生成器 | done | T-003 | dev |
-| T-008 | ST-004 | eval-sync 联动触发集成 | pending | T-007 | dev |
-| T-009 | ST-005 | 草稿保存与中断恢复 | pending | T-001 | dev |
+| T-008 | ST-004 | eval-sync 联动触发集成 | done | T-007 | dev |
+| T-009 | ST-005 | 草稿保存与中断恢复 | done | T-001 | dev |
+| T-010 | ST-002/ST-004/ST-005 | QA 回流修复：create.ts 集成连线与 mergeContent 补全 | done | T-006,T-008,T-009 | dev |
+
+---
+
+## T-010 QA 回流修复：create.ts 集成连线与 mergeContent 补全
+
+```yaml
+id: T-010
+story_id: "ST-002,ST-004,ST-005"
+title: "QA 回流修复：create.ts 集成连线与 mergeContent 补全"
+owner_role: dev
+status: in_progress
+depends_on: [T-006, T-008, T-009]
+read_paths:
+  - src/core/create/types.ts
+  - src/core/create/step-runner.ts
+  - src/core/create/edit-mode.ts
+  - src/core/create/skill-loader.ts
+  - src/core/create/eval-sync-trigger.ts
+  - src/core/create/draft-manager.ts
+  - src/core/create/skill-md-writer.ts
+write_paths:
+  - src/commands/create.ts
+  - src/core/create/skill-md-writer.ts
+  - tests/commands/create.test.ts
+verify:
+  - type: command
+    value: npm run build
+  - type: command
+    value: npm test -- --grep "create command"
+  - type: manual
+    value: "quick-skill create --edit <skill-name> 可进入编辑模式"
+  - type: manual
+    value: "创建/编辑完成后正确提示 eval-sync 联动"
+  - type: manual
+    value: "中断后重新执行 create 可检测草稿并提示继续/重新开始"
+```
+
+### 目标
+
+1. 修复 D-01：`create.ts` 添加 `--edit` 分支，调用 `SkillLoader.findSkill()` → `EditMode.loadSkill()` → `EditMode.runEditFlow()` → `SkillMdWriter.update()`
+2. 修复 D-02：`create.ts` 创建 `DraftManager` 实例并注入 `StepRunner`
+3. 修复 D-03：`create.ts` 在文件生成/更新完成后调用 `EvalSyncTriggerImpl`
+4. 修复 D-04：`skill-md-writer.ts` 的 `mergeContent` 实现真正的章节级合并
+5. 修复 D-07：编辑模式调用 `SkillMdWriter.update()` 而非 `create()`
+6. 修复 D-06：区分"新建"和"更新"状态的确认信息
+
+### 交付物
+
+- `src/commands/create.ts` -- 完整的创建/编辑/草稿恢复/联动触发集成逻辑
+- `src/core/create/skill-md-writer.ts` -- 修复 mergeContent 实现章节级合并
+- `tests/commands/create.test.ts` -- 集成测试覆盖各分支
+
+### 备注
+
+- 此 task 为 QA 回流修复任务，不涉及新模块开发
+- 所有依赖模块（EditMode、DraftManager、EvalSyncTriggerImpl）均已实现并通过测试
+- 重点是正确连线和集成，而非重写
 
 ---
 

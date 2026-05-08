@@ -28,7 +28,7 @@
 |----|------|------|--------|------|
 | FEAT-001 | skill-diagnose 存量技能合规性诊断 | planning | P1 | specs/FEAT-001-skill-diagnose/ |
 | FEAT-002 | skill-transform 存量技能标准化改造 | planning | P1 | specs/FEAT-002-skill-transform/ |
-| FEAT-003 | skill-create 集成Anthropic skill-creator | planning | P1 | specs/FEAT-003-skill-create/ |
+| FEAT-003 | skill-create 集成Anthropic skill-creator | done | P1 | specs/FEAT-003-skill-create/ |
 | FEAT-004 | eval-gen 自动化初始用例生成 | planning | P1 | specs/FEAT-004-eval-gen/ |
 | FEAT-005 | eval-sync 技能迭代与用例自动同步 | planning | P1 | specs/FEAT-005-eval-sync/ |
 | FEAT-006 | eval 标准化Skill评测引擎 | planning | P1 | specs/FEAT-006-eval/ |
