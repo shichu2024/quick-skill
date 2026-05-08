@@ -7,6 +7,10 @@
   "bin": {
     "quick-skill": "dist/cli.js"
   },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "vitest",
