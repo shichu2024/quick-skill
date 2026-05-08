@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quick SDD"
+  short_description: "初始化、续跑并编排轻量级 SDD 多 agent 规范工作区"
+  default_prompt: "使用 $quick-sdd 初始化或续跑当前项目的 codespec 工作区，只完成编排与下一角色派发，不跨角色直接做完整需求。"

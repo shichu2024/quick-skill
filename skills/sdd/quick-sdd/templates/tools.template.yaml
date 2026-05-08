@@ -1,0 +1,24 @@
+tools:
+  e2e-start:
+    kind: start
+    purpose: 启动应用以进行端到端验证。
+    command: npm run dev
+    precheck:
+      ports: [3000]
+      kill_if_occupied: true
+    ready_check:
+      type: http
+      target: http://localhost:3000/health
+      timeout_sec: 60
+    cleanup:
+      type: stop_started_process
+
+  unit-test:
+    kind: command
+    purpose: 运行当前 task 的单元测试。
+    command: npm test
+
+  lint:
+    kind: command
+    purpose: 运行当前 task 的 lint 检查。
+    command: npm run lint

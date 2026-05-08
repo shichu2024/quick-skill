@@ -1,0 +1,75 @@
+# IDE 和编辑器配置
+.claude/
+.opencode/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn
+
+# TypeScript 编译输出
+dist/
+*.tsbuildinfo
+
+# 测试相关
+coverage/
+.nyc_output/
+temp-*
+temp-test-*
+
+# CLI 测试生成的目录（init 命令）
+claude/
+opencode/
+.relay/
+
+# 测试过程中创建的 Skill
+skills/public/my-test-skill/
+skills/public/test-skill/
+skills/*/test-*
+skills/*/*test*
+
+# 日志文件
+*.log
+logs/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+*.bak
+*.backup
+
+# 临时文件
+*.tmp
+*.temp
+.cache/
+
+# SDD 相关（保留规格文档，忽略临时状态）
+# codespec/runtime/state.json 可以保留用于追踪进度
+# 但以下临时文件可以忽略
+codespec/runtime/*.bak
+*.draft.json
+.create-draft.json
+
+# 环境变量和密钥
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# 打包文件
+*.tgz
+*.tar.gz
+*.zip
+
+# 其他
+.eslintcache
+.parcel-cache

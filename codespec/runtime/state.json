@@ -1,0 +1,28 @@
+{
+  "active_feature": "FEAT-003-skill-create",
+  "active_phase": "implementing",
+  "active_dispatch": {
+    "role": "dev",
+    "story": "",
+    "task": "T-006"
+  },
+  "resume": {
+    "mode": "continue",
+    "next_role": "dev",
+    "next_action": "核心功能已完成，可选功能 T-006/T-008/T-009 待实现"
+  },
+  "latest_validation": {
+    "story": "",
+    "task": "",
+    "status": "",
+    "decision": "",
+    "root_cause_type": "",
+    "reroute_to": "",
+    "reroute_action": "",
+    "summary": "",
+    "report_ref": "",
+    "updated_at": ""
+  },
+  "blocked": [],
+  "last_updated": "2026-05-08T09:29:00Z"
+}

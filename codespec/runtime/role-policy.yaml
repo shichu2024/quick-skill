@@ -1,0 +1,82 @@
+# 角色上限权限模板。
+# 这里定义的是角色级最大可见范围，不是当前 task 的实际生效范围。
+# 实际执行时，应该再与 tasks.md 中的 task 级访问范围取交集。
+
+scope_resolution:
+  active_feature:
+    kind: state_field
+    path: active_feature
+
+  active_task:
+    kind: state_field
+    path: active_dispatch.task
+
+  active_story:
+    kind: state_field
+    path: active_dispatch.story
+    fallback:
+      kind: task_field
+      feature_ref: active_feature
+      task_ref: active_task
+      field: story_id
+
+  task_read_paths:
+    kind: task_field
+    feature_ref: active_feature
+    task_ref: active_task
+    field: read_paths
+
+  task_write_paths:
+    kind: task_field
+    feature_ref: active_feature
+    task_ref: active_task
+    field: write_paths
+
+  story_task_write_paths:
+    kind: story_task_union
+    feature_ref: active_feature
+    story_ref: active_story
+    field: write_paths
+
+roles:
+  pm:
+    read:
+      - literal: codespec/**
+    write:
+      - literal: codespec/README.md
+      - literal: codespec/runtime/**
+
+  ra:
+    read:
+      - literal: codespec/README.md
+      - literal: codespec/specs/**/proposal.md
+      - literal: codespec/specs/**/stories.md
+    write:
+      - literal: codespec/specs/**/proposal.md
+      - literal: codespec/specs/**/stories.md
+
+  ta:
+    read:
+      - literal: codespec/specs/**/proposal.md
+      - literal: codespec/specs/**/stories.md
+    write:
+      - literal: codespec/specs/**/tasks.md
+
+  dev:
+    read:
+      - literal: codespec/README.md
+      - literal: codespec/specs/${active_feature}/stories.md
+      - literal: codespec/specs/${active_feature}/tasks.md
+      - resolver: task_read_paths
+    write:
+      - resolver: task_write_paths
+
+  qa:
+    read:
+      - literal: codespec/README.md
+      - literal: codespec/specs/${active_feature}/proposal.md
+      - literal: codespec/specs/${active_feature}/stories.md
+      - literal: codespec/specs/${active_feature}/tasks.md
+      - resolver: story_task_write_paths
+    write:
+      - literal: codespec/specs/${active_feature}/validation-report.md

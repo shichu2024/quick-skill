@@ -1,0 +1,20 @@
+tools:
+  unit-test:
+    kind: command
+    purpose: 运行当前 task 的单元测试。
+    command: npm test
+
+  lint:
+    kind: command
+    purpose: 运行当前 task 的 lint 检查。
+    command: npm run lint
+
+  build:
+    kind: command
+    purpose: 构建 CLI 项目。
+    command: npm run build
+
+  cli-test:
+    kind: command
+    purpose: 手动测试 CLI 命令。
+    command: npx quick-skill

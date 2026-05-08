@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quick SDD RA"
+  short_description: "负责 Quick SDD 的需求澄清、价值切片、story 质量与验收标准"
+  default_prompt: "使用 $quick-sdd-ra 把当前需求整理成 proposal 和高质量、可验证、可交接的 stories。"

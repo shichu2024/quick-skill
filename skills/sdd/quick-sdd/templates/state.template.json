@@ -1,0 +1,61 @@
+{
+  "_comment": {
+    "说明": "这是 pm 维护的唯一运行时状态模板。",
+    "使用规则": [
+      "这里只保存当前激活的调度状态，不复制 task 的 ACL 细节。",
+      "如果当前没有激活的 feature 或 task，可以保留空字符串。",
+      "blocked 用于记录当前阻塞项，可为空数组。",
+      "resume 用于告诉下一步该由谁接手以及最小动作是什么。",
+      "latest_validation 是最近一次 QA 裁决的去规范化快照，便于 PM 快速续跑，不替代 validation-report.md。",
+      "推荐在 QA 更新 validation-report.md 后，优先运行 sync_validation_snapshot.py 把快照同步进 state.json。"
+    ],
+    "字段解释": {
+      "active_feature": "当前激活的 feature 目录键，例如 FEAT-001-user-auth；它对应 codespec/specs/ 下的目录名。",
+      "active_phase": "当前所处阶段，例如 proposal、stories、planning、implementing、validating、done 或 idle。",
+      "active_dispatch.role": "当前执行角色，例如 dev 或 qa。",
+      "active_dispatch.story": "当前激活的 story ID，例如 ST-001。",
+      "active_dispatch.task": "当前激活的 task ID，例如 T-001。",
+      "resume.mode": "当前恢复模式，例如 init、continue、repair 或 validate。",
+      "resume.next_role": "下一步应该由哪个角色接手。",
+      "resume.next_action": "下一步最小动作说明。",
+      "latest_validation.story": "最近一次被 QA 裁决的 story ID。",
+      "latest_validation.task": "最近一次被 QA 裁决所关联的 task ID，可为空。",
+      "latest_validation.status": "QA 轮次执行状态，例如 DONE 或 DONE_WITH_CONCERNS。",
+      "latest_validation.decision": "最近一次 QA 验证裁决，例如 pass、conditional_pass 或 fail。",
+      "latest_validation.root_cause_type": "最近一次 QA 对问题根因的结构化分类，例如 implementation、task_boundary 或 requirement_gap。",
+      "latest_validation.reroute_to": "最近一次 QA 建议回流的角色，例如 dev、ta、ra 或 pm。",
+      "latest_validation.reroute_action": "最近一次 QA 建议 PM 写入 resume 的最小下一步动作。",
+      "latest_validation.summary": "QA 给 PM 的简短结论摘要。",
+      "latest_validation.report_ref": "对应 validation-report.md 中的引用位置或路径。",
+      "latest_validation.updated_at": "最近一次 QA 裁决写入 state 的时间；推荐由 sync_validation_snapshot.py 维护。",
+      "blocked": "当前阻塞项列表。",
+      "last_updated": "最后更新时间，建议使用 ISO 8601 时间格式。"
+    }
+  },
+  "active_feature": "",
+  "active_phase": "idle",
+  "active_dispatch": {
+    "role": "",
+    "story": "",
+    "task": ""
+  },
+  "resume": {
+    "mode": "init",
+    "next_role": "",
+    "next_action": ""
+  },
+  "latest_validation": {
+    "story": "",
+    "task": "",
+    "status": "",
+    "decision": "",
+    "root_cause_type": "",
+    "reroute_to": "",
+    "reroute_action": "",
+    "summary": "",
+    "report_ref": "",
+    "updated_at": ""
+  },
+  "blocked": [],
+  "last_updated": ""
+}

@@ -1,0 +1,39 @@
+{
+  "name": "quick-skill",
+  "version": "0.1.0",
+  "description": "AI Skill 全生命周期管理 CLI 工具",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "quick-skill": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "dev": "tsc --watch",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai",
+    "skill",
+    "cli",
+    "claude",
+    "opencode"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.5.0"
+  }
+}
