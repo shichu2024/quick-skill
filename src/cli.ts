@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 import initCommand from './commands/init.js';
+import { registerEvalGenCommand } from './commands/eval-gen.js';
 
 const program = new Command();
 
@@ -39,5 +40,8 @@ program
     const diagnoseCommand = await import('./commands/diagnose.js');
     await diagnoseCommand.default(skillPath, options);
   });
+
+// 注册 eval-gen 命令
+registerEvalGenCommand(program);
 
 program.parse(process.argv);

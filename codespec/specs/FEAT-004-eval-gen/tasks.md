@@ -4,14 +4,14 @@
 
 | ID | Story | 标题 | 状态 | 依赖 | 负责人 |
 |----|-------|------|------|------|--------|
-| T-001 | ST-001 | SKILL.md 解析器 | todo | 无 | dev |
-| T-002 | ST-002 | 显式与隐式调用用例生成器 | todo | T-001 | dev |
-| T-003 | ST-002 | 上下文/噪声与负例用例生成器 | todo | T-001 | dev |
-| T-004 | ST-003 | CSV 读写器 | todo | 无 | dev |
-| T-005 | ST-003 | 快照管理器 | todo | 无 | dev |
-| T-006 | ST-004 | eval-gen 单 Skill 命令入口 | todo | T-001, T-002, T-003, T-004, T-005 | dev |
-| T-007 | ST-005 | 覆盖模式与备份保护 | todo | T-006 | dev |
-| T-008 | ST-006 | eval-gen --all 批量生成 | todo | T-006 | dev |
+| T-001 | ST-001 | SKILL.md 解析器 | done | 无 | dev |
+| T-002 | ST-002 | 显式与隐式调用用例生成器 | done | T-001 | dev |
+| T-003 | ST-002 | 上下文/噪声与负例用例生成器 | done | T-001 | dev |
+| T-004 | ST-003 | CSV 读写器 | done | 无 | dev |
+| T-005 | ST-003 | 快照管理器 | done | 无 | dev |
+| T-006 | ST-004 | eval-gen 单 Skill 命令入口 | done | T-001, T-002, T-003, T-004, T-005 | dev |
+| T-007 | ST-005 | 覆盖模式与备份保护 | done | T-006 | dev |
+| T-008 | ST-006 | eval-gen --all 批量生成 | done | T-006 | dev |
 
 ---
 
@@ -22,20 +22,8 @@ id: T-001
 story_id: ST-001
 title: SKILL.md 解析器
 owner_role: dev
-status: todo
+status: done
 depends_on: []
-read_paths:
-  - src/core/skill-parser.ts
-  - src/types/skill.ts
-write_paths:
-  - src/core/skill-parser.ts
-  - src/types/skill.ts
-  - tests/unit/core/skill-parser.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/unit/core/skill-parser.test.ts
-  - type: manual
-    value: 验证 ST-001 全部 AC 通过（AC-001-1 ~ AC-001-7）
 ```
 
 ### 目标
@@ -80,22 +68,8 @@ id: T-002
 story_id: ST-002
 title: 显式与隐式调用用例生成器
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-001]
-read_paths:
-  - src/core/explicit-implicit-generator.ts
-  - src/types/skill.ts
-  - src/types/test-case.ts
-  - src/core/skill-parser.ts
-write_paths:
-  - src/core/explicit-implicit-generator.ts
-  - src/types/test-case.ts
-  - tests/unit/core/explicit-implicit-generator.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/unit/core/explicit-implicit-generator.test.ts
-  - type: manual
-    value: 验证 AC-002-1（显式 2-3 条）和 AC-002-2（隐式 3-4 条）
 ```
 
 ### 目标
@@ -137,21 +111,8 @@ id: T-003
 story_id: ST-002
 title: 上下文/噪声与负例用例生成器
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-001]
-read_paths:
-  - src/core/context-negative-generator.ts
-  - src/types/skill.ts
-  - src/types/test-case.ts
-  - src/core/skill-parser.ts
-write_paths:
-  - src/core/context-negative-generator.ts
-  - tests/unit/core/context-negative-generator.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/unit/core/context-negative-generator.test.ts
-  - type: manual
-    value: 验证 AC-002-3（上下文 3-4 条）和 AC-002-4（负例 3-4 条）及 AC-002-5~AC-002-8
 ```
 
 ### 目标
@@ -183,22 +144,8 @@ id: T-004
 story_id: ST-003
 title: CSV 读写器
 owner_role: dev
-status: todo
+status: done
 depends_on: []
-read_paths:
-  - src/io/csv-reader.ts
-  - src/io/csv-writer.ts
-  - src/types/test-case.ts
-write_paths:
-  - src/io/csv-reader.ts
-  - src/io/csv-writer.ts
-  - tests/unit/io/csv-reader.test.ts
-  - tests/unit/io/csv-writer.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/unit/io/csv-reader.test.ts tests/unit/io/csv-writer.test.ts
-  - type: manual
-    value: 验证 AC-003-2（表头格式）和 AC-003-3（CSV 转义合法性）
 ```
 
 ### 目标
@@ -240,20 +187,8 @@ id: T-005
 story_id: ST-003
 title: 快照管理器
 owner_role: dev
-status: todo
+status: done
 depends_on: []
-read_paths:
-  - src/io/snapshot-manager.ts
-  - src/types/snapshot.ts
-write_paths:
-  - src/io/snapshot-manager.ts
-  - src/types/snapshot.ts
-  - tests/unit/io/snapshot-manager.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/unit/io/snapshot-manager.test.ts
-  - type: manual
-    value: 验证 AC-003-4（快照内容完整性）和 AC-003-5（版本哈希正确性）
 ```
 
 ### 目标
@@ -297,27 +232,8 @@ id: T-006
 story_id: ST-004
 title: eval-gen 单 Skill 命令入口
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-001, T-002, T-003, T-004, T-005]
-read_paths:
-  - src/cli/commands/eval-gen.ts
-  - src/core/skill-parser.ts
-  - src/core/explicit-implicit-generator.ts
-  - src/core/context-negative-generator.ts
-  - src/io/csv-writer.ts
-  - src/io/snapshot-manager.ts
-  - src/types/skill.ts
-  - src/types/test-case.ts
-  - src/types/snapshot.ts
-write_paths:
-  - src/cli/commands/eval-gen.ts
-  - src/cli/utils/skill-finder.ts
-  - tests/integration/eval-gen.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/integration/eval-gen.test.ts
-  - type: manual
-    value: 验证 ST-004 全部 AC（AC-004-1 ~ AC-004-5）
 ```
 
 ### 目标
@@ -359,20 +275,8 @@ id: T-007
 story_id: ST-005
 title: 覆盖模式与备份保护
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-006]
-read_paths:
-  - src/cli/commands/eval-gen.ts
-  - src/io/csv-reader.ts
-  - src/io/backup.ts
-write_paths:
-  - src/io/backup.ts
-  - tests/unit/io/backup.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/unit/io/backup.test.ts
-  - type: manual
-    value: 验证 ST-005 全部 AC（AC-005-1 ~ AC-005-6）
 ```
 
 ### 目标
@@ -410,20 +314,8 @@ id: T-008
 story_id: ST-006
 title: eval-gen --all 批量生成
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-006]
-read_paths:
-  - src/cli/commands/eval-gen.ts
-  - src/cli/utils/skill-finder.ts
-  - src/io/csv-writer.ts
-write_paths:
-  - src/cli/commands/eval-gen.ts
-  - tests/integration/eval-gen-batch.test.ts
-verify:
-  - type: command
-    value: npx vitest run tests/integration/eval-gen-batch.test.ts
-  - type: manual
-    value: 验证 ST-006 全部 AC（AC-006-1 ~ AC-006-6）
 ```
 
 ### 目标

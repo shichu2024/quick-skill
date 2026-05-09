@@ -1,28 +1,28 @@
 {
-  "active_feature": "FEAT-001-skill-diagnose",
+  "active_feature": "FEAT-004-eval-gen",
   "active_phase": "validating",
   "active_dispatch": {
     "role": "qa",
-    "story": "ST-001",
-    "task": "T-013"
+    "story": "ST-006",
+    "task": "T-008"
   },
   "resume": {
     "mode": "active",
     "next_role": "qa",
-    "next_action": "FEAT-001 所有 task 已完成，进入验证阶段"
+    "next_action": "FEAT-004 eval-gen 所有 8 个任务已完成，进入 QA 验证阶段"
   },
   "latest_validation": {
-    "story": "",
-    "task": "",
+    "story": "ST-006",
+    "task": "T-008",
     "status": "completed",
     "decision": "pass",
     "root_cause_type": "",
     "reroute_to": "",
     "reroute_action": "",
-    "summary": "FEAT-003-skill-create 所有 story 验收标准均已满足。T-010 成功修复所有 blocking 缺陷，create.ts 完整集成编辑模式、草稿恢复、eval-sync 联动，mergeContent 实现章节级更新。",
-    "report_ref": "codespec/specs/FEAT-003-skill-create/validation-report.md",
-    "updated_at": "2026-05-08T10:05:00Z"
+    "summary": "FEAT-004 eval-gen 全部 8 个任务 (T-001~T-008) 已完成。93 个测试用例通过，包括 SKILL.md 解析器、显式/隐式调用生成器、上下文/负例生成器、CSV 读写器、快照管理器、备份模块、eval-gen CLI 命令入口和批量 --all 模式。",
+    "report_ref": "codespec/specs/FEAT-004-eval-gen/validation-report.md",
+    "updated_at": "2026-05-09T09:16:00Z"
   },
   "blocked": [],
-  "last_updated": "2026-05-08T10:05:00Z"
+  "last_updated": "2026-05-09T09:16:00Z"
 }
