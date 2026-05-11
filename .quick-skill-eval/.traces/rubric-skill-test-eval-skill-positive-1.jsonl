@@ -1,0 +1,14 @@
+{"timestamp":"2026-05-09T10:06:32.236Z","caseId":"test-eval-skill-positive-1","eventType":"skill_trigger","detail":{"skillName":"rubric-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-09T10:06:32.287Z","caseId":"test-eval-skill-positive-1","eventType":"model_call","detail":{"rubricScore":0,"overallPass":false,"modelCalls":0},"result":"failure"}
+{"timestamp":"2026-05-09T14:00:04.308Z","caseId":"test-eval-skill-positive-1","eventType":"skill_trigger","detail":{"skillName":"rubric-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-09T14:00:04.444Z","caseId":"test-eval-skill-positive-1","eventType":"model_call","detail":{"rubricScore":0,"overallPass":false,"modelCalls":0},"result":"failure"}
+{"timestamp":"2026-05-11T10:14:14.439Z","caseId":"test-eval-skill-positive-1","eventType":"skill_trigger","detail":{"skillName":"rubric-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T10:14:14.455Z","caseId":"test-eval-skill-positive-1","eventType":"model_call","detail":{"rubricScore":0,"overallPass":false,"modelCalls":0},"result":"failure"}
+{"timestamp":"2026-05-11T10:15:19.224Z","caseId":"test-eval-skill-positive-1","eventType":"skill_trigger","detail":{"skillName":"rubric-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T10:15:19.314Z","caseId":"test-eval-skill-positive-1","eventType":"model_call","detail":{"rubricScore":0,"overallPass":false,"modelCalls":0},"result":"failure"}
+{"timestamp":"2026-05-11T14:01:44.794Z","caseId":"test-eval-skill-positive-1","eventType":"skill_trigger","detail":{"skillName":"rubric-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T14:01:44.965Z","caseId":"test-eval-skill-positive-1","eventType":"model_call","detail":{"rubricScore":0,"overallPass":false,"modelCalls":0},"result":"failure"}
+{"timestamp":"2026-05-11T14:13:33.518Z","caseId":"test-eval-skill-positive-1","eventType":"skill_trigger","detail":{"skillName":"rubric-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T14:13:33.535Z","caseId":"test-eval-skill-positive-1","eventType":"model_call","detail":{"rubricScore":0,"overallPass":false,"modelCalls":0},"result":"failure"}
+{"timestamp":"2026-05-11T14:15:12.054Z","caseId":"test-eval-skill-positive-1","eventType":"skill_trigger","detail":{"skillName":"rubric-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T14:15:12.171Z","caseId":"test-eval-skill-positive-1","eventType":"model_call","detail":{"rubricScore":0,"overallPass":false,"modelCalls":0},"result":"failure"}

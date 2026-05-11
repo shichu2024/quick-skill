@@ -1,28 +1,28 @@
 {
-  "active_feature": "FEAT-004-eval-gen",
-  "active_phase": "validating",
+  "active_feature": "FEAT-006-eval",
+  "active_phase": "done",
   "active_dispatch": {
-    "role": "qa",
-    "story": "ST-006",
-    "task": "T-008"
+    "role": "pm",
+    "story": "",
+    "task": ""
   },
   "resume": {
-    "mode": "active",
-    "next_role": "qa",
-    "next_action": "FEAT-004 eval-gen 所有 8 个任务已完成，进入 QA 验证阶段"
+    "mode": "idle",
+    "next_role": "pm",
+    "next_action": "FEAT-005 和 FEAT-006 全部完成，项目处于空闲状态"
   },
   "latest_validation": {
-    "story": "ST-006",
-    "task": "T-008",
+    "story": "ST-002",
+    "task": "T-FIX-001",
     "status": "completed",
     "decision": "pass",
     "root_cause_type": "",
     "reroute_to": "",
     "reroute_action": "",
-    "summary": "FEAT-004 eval-gen 全部 8 个任务 (T-001~T-008) 已完成。93 个测试用例通过，包括 SKILL.md 解析器、显式/隐式调用生成器、上下文/负例生成器、CSV 读写器、快照管理器、备份模块、eval-gen CLI 命令入口和批量 --all 模式。",
-    "report_ref": "codespec/specs/FEAT-004-eval-gen/validation-report.md",
-    "updated_at": "2026-05-09T09:16:00Z"
+    "summary": "FEAT-005 eval-sync 缺陷修复验证通过 (165/165)。FEAT-006 eval 全部通过 (330/330)。",
+    "report_ref": "codespec/specs/FEAT-005-eval-sync/validation-report.md",
+    "updated_at": "2026-05-09T19:00:00Z"
   },
   "blocked": [],
-  "last_updated": "2026-05-09T09:16:00Z"
+  "last_updated": "2026-05-09T19:00:00Z"
 }

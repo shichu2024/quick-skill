@@ -1,0 +1,15 @@
+{"timestamp":"2026-05-09T10:04:25.014Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-09T10:06:32.451Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-09T10:06:33.631Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-09T14:00:04.578Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-09T14:00:05.783Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T10:14:14.655Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T10:14:15.843Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T10:15:19.491Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T10:15:20.675Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:01:45.126Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:01:46.302Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:13:33.690Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:13:34.934Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:15:12.314Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:15:13.499Z","caseId":"test-eval-skill-negative-1","eventType":"skill_trigger","detail":{"skillName":"regression-skill","shouldTrigger":false},"result":"success"}

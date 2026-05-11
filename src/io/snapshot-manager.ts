@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { createHash } from 'crypto';
 import { SkillSnapshot } from '../types/snapshot.js';
 
 export class SnapshotError extends Error {
@@ -12,8 +13,13 @@ export class SnapshotError extends Error {
 /**
  * 生成 .skill-snapshot.json 文件
  * 记录 SKILL.md 完整文本和 SHA-256 版本哈希
+ * @param caseHashes 可选，系统生成用例的内容哈希映射（用于冲突检测）
  */
-export function generateSnapshot(skillMdPath: string, outputDir: string): SkillSnapshot {
+export function generateSnapshot(
+  skillMdPath: string,
+  outputDir: string,
+  caseHashes?: Record<string, string>
+): SkillSnapshot {
   const absolutePath = path.resolve(skillMdPath);
 
   if (!fs.existsSync(absolutePath)) {
@@ -29,6 +35,11 @@ export function generateSnapshot(skillMdPath: string, outputDir: string): SkillS
     hash,
     timestamp,
   };
+
+  // 附加用例哈希映射（用于 T-004 冲突检测）
+  if (caseHashes) {
+    snapshot.caseHashes = caseHashes;
+  }
 
   // 确保输出目录存在
   if (!fs.existsSync(outputDir)) {
@@ -74,6 +85,5 @@ export function readSnapshot(snapshotPath: string): SkillSnapshot | null {
  * 计算字符串的 SHA-256 哈希（十六进制）
  */
 function computeSha256(content: string): string {
-  const crypto = require('crypto');
-  return crypto.createHash('sha256').update(content, 'utf-8').digest('hex');
+  return createHash('sha256').update(content, 'utf-8').digest('hex');
 }

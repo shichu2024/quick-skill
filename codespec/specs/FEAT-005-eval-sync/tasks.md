@@ -4,15 +4,16 @@
 
 | ID | Story | 标题 | 状态 | 依赖 | 负责人 |
 |----|-------|------|------|------|--------|
-| T-001 | ST-001 | SKILL.md 变更检测引擎 | todo | 无 | dev |
-| T-002 | ST-001 | 章节变更到用例的影响映射规则 | todo | T-001 | dev |
-| T-003 | ST-005 | 约束解析与分类器 | todo | 无 | dev |
-| T-004 | ST-003 | 用例内容哈希与冲突检测器 | todo | 无 | dev |
-| T-005 | ST-004 | 用例停用处理器 | todo | T-001 | dev |
-| T-006 | ST-002 | 增量用例同步执行引擎 | todo | T-001, T-002, T-004, T-005 | dev |
-| T-007 | ST-006 | 约束驱动的 SKILL.md 更新与用例调整 | todo | T-003, T-006 | dev |
-| T-008 | ST-007 | eval-sync 命令入口（单 Skill + --override） | todo | T-006, T-007 | dev |
-| T-009 | ST-008 | eval-sync --all 批量同步 | todo | T-008 | dev |
+| T-001 | ST-001 | SKILL.md 变更检测引擎 | done | 无 | dev |
+| T-002 | ST-001 | 章节变更到用例的影响映射规则 | done | T-001 | dev |
+| T-003 | ST-005 | 约束解析与分类器 | done | 无 | dev |
+| T-004 | ST-003 | 用例内容哈希与冲突检测器 | done | 无 | dev |
+| T-005 | ST-004 | 用例停用处理器 | done | T-001 | dev |
+| T-006 | ST-002 | 增量用例同步执行引擎 | done | T-001, T-002, T-004, T-005 | dev |
+| T-007 | ST-006 | 约束驱动的 SKILL.md 更新与用例调整 | done | T-003, T-006 | dev |
+| T-008 | ST-007 | eval-sync 命令入口（单 Skill + --override） | done | T-006, T-007 | dev |
+| T-009 | ST-008 | eval-sync --all 批量同步 | done | T-008 | dev |
+| T-FIX-001 | ST-002 | 修复无变更时快照错误写入缺陷 | done | T-006 | dev |
 
 ---
 
@@ -23,7 +24,7 @@ id: T-001
 story_id: ST-001
 title: SKILL.md 变更检测引擎
 owner_role: dev
-status: todo
+status: done
 depends_on: []
 read_paths:
   - src/core/change-detector.ts
@@ -92,7 +93,7 @@ id: T-002
 story_id: ST-001
 title: 章节变更到用例的影响映射规则
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-001]
 read_paths:
   - src/core/impact-mapper.ts
@@ -160,7 +161,7 @@ id: T-003
 story_id: ST-005
 title: 约束解析与分类器
 owner_role: dev
-status: todo
+status: done
 depends_on: []
 read_paths:
   - src/core/constraint-parser.ts
@@ -220,7 +221,7 @@ id: T-004
 story_id: ST-003
 title: 用例内容哈希与冲突检测器
 owner_role: dev
-status: todo
+status: done
 depends_on: []
 read_paths:
   - src/core/conflict-detector.ts
@@ -278,7 +279,7 @@ id: T-005
 story_id: ST-004
 title: 用例停用处理器
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-001]
 read_paths:
   - src/core/case-deprecator.ts

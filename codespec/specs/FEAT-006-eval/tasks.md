@@ -4,21 +4,21 @@
 
 | ID | Story | 标题 | 状态 | 依赖 | 负责人 |
 |----|-------|------|------|------|--------|
-| T-001 | ST-001 | 用例加载器 | todo | 无 | dev |
-| T-002 | ST-002 | 沙箱管理器 | todo | 无 | dev |
-| T-003 | ST-006 | JSONL Trace 收集器 | todo | 无 | dev |
-| T-004 | ST-003 | 确定性评测引擎 - 结果目标检查器 | todo | T-001, T-002, T-003 | dev |
-| T-005 | ST-003 | 确定性评测引擎 - 流程目标检查器 | todo | T-001, T-002, T-003 | dev |
-| T-006 | ST-003 | 确定性评测引擎 - 风格目标检查器 | todo | T-001, T-002, T-003 | dev |
-| T-007 | ST-003 | 确定性评测引擎 - 效率目标检查器 | todo | T-001, T-002, T-003 | dev |
-| T-008 | ST-003 | 确定性评测引擎编排器 | todo | T-004, T-005, T-006, T-007 | dev |
-| T-009 | ST-004 | 模型辅助 Rubric 评测引擎 | todo | T-002, T-003 | dev |
-| T-010 | ST-005 | 多维度量化打分体系 | todo | T-008, T-009 | dev |
-| T-011 | ST-007 | 测试结果持久化与归档 | todo | T-008, T-010 | dev |
-| T-012 | ST-008 | 回归检测与版本对比 | todo | T-011 | dev |
-| T-013 | ST-011 | HTML 可视化报告生成 | todo | T-011 | dev |
-| T-014 | ST-009 | eval 单 Skill 评测命令 | todo | T-010, T-011 | dev |
-| T-015 | ST-010 | 批量与全量评测命令 | todo | T-014 | dev |
+| T-001 | ST-001 | 用例加载器 | done | 无 | dev |
+| T-002 | ST-002 | 沙箱管理器 | done | 无 | dev |
+| T-003 | ST-006 | JSONL Trace 收集器 | done | 无 | dev |
+| T-004 | ST-003 | 确定性评测引擎 - 结果目标检查器 | done | T-001, T-002, T-003 | dev |
+| T-005 | ST-003 | 确定性评测引擎 - 流程目标检查器 | done | T-001, T-002, T-003 | dev |
+| T-006 | ST-003 | 确定性评测引擎 - 风格目标检查器 | done | T-001, T-002, T-003 | dev |
+| T-007 | ST-003 | 确定性评测引擎 - 效率目标检查器 | done | T-001, T-002, T-003 | dev |
+| T-008 | ST-003 | 确定性评测引擎编排器 | done | T-004, T-005, T-006, T-007 | dev |
+| T-009 | ST-004 | 模型辅助 Rubric 评测引擎 | done | T-002, T-003 | dev |
+| T-010 | ST-005 | 多维度量化打分体系 | done | T-008, T-009 | dev |
+| T-011 | ST-007 | 测试结果持久化与归档 | done | T-008, T-010 | dev |
+| T-012 | ST-008 | 回归检测与版本对比 | done | T-011 | dev |
+| T-013 | ST-011 | HTML 可视化报告生成 | done | T-011 | dev |
+| T-014 | ST-009 | eval 单 Skill 评测命令 | done | T-010, T-011 | dev |
+| T-015 | ST-010 | 批量与全量评测命令 | done | T-014 | dev |
 
 ---
 
@@ -578,7 +578,7 @@ id: T-010
 story_id: ST-005
 title: 多维度量化打分体系
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-008, T-009]
 read_paths:
   - src/eval/scorer.ts
@@ -910,7 +910,7 @@ id: T-015
 story_id: ST-010
 title: 批量与全量评测命令
 owner_role: dev
-status: todo
+status: done
 depends_on: [T-014]
 read_paths:
   - src/cli/commands/eval.ts

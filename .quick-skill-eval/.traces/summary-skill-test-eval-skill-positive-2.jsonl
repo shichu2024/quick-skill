@@ -1,0 +1,7 @@
+{"timestamp":"2026-05-09T10:06:31.923Z","caseId":"test-eval-skill-positive-2","eventType":"skill_trigger","detail":{"skillName":"summary-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-09T14:00:03.942Z","caseId":"test-eval-skill-positive-2","eventType":"skill_trigger","detail":{"skillName":"summary-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T10:14:13.714Z","caseId":"test-eval-skill-positive-2","eventType":"skill_trigger","detail":{"skillName":"summary-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T10:15:18.725Z","caseId":"test-eval-skill-positive-2","eventType":"skill_trigger","detail":{"skillName":"summary-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T14:01:44.282Z","caseId":"test-eval-skill-positive-2","eventType":"skill_trigger","detail":{"skillName":"summary-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T14:13:33.044Z","caseId":"test-eval-skill-positive-2","eventType":"skill_trigger","detail":{"skillName":"summary-skill","shouldTrigger":true},"result":"success"}
+{"timestamp":"2026-05-11T14:15:11.549Z","caseId":"test-eval-skill-positive-2","eventType":"skill_trigger","detail":{"skillName":"summary-skill","shouldTrigger":true},"result":"success"}

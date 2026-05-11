@@ -2,6 +2,7 @@
 import { Command } from 'commander';
 import initCommand from './commands/init.js';
 import { registerEvalGenCommand } from './commands/eval-gen.js';
+import { registerEvalSyncCommand } from './cli/commands/eval-sync.js';
 
 const program = new Command();
 
@@ -43,5 +44,12 @@ program
 
 // 注册 eval-gen 命令
 registerEvalGenCommand(program);
+
+// 注册 eval-sync 命令
+registerEvalSyncCommand(program);
+
+// 注册 eval 命令
+import { registerEvalCommand } from './cli/commands/eval.js';
+registerEvalCommand(program);
 
 program.parse(process.argv);

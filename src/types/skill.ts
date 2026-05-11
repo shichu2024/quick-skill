@@ -5,6 +5,8 @@ export interface SkillAnchor {
   whenNotToUse: string;
   definitionOfDone: string;
   whatToBuild: string;
+  /** SKILL.md 中 "Steps" 章节内容（流程目标检查用） */
+  steps?: string;
 }
 
 export class SkillParseError extends Error {

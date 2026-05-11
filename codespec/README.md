@@ -3,8 +3,8 @@
 ## 概览
 
 - 项目：quick-skill — AI Skill 全生命周期管理 CLI 工具
-- 当前激活的功能：FEAT-001-skill-diagnose (validating)
-- 最后更新时间：2026-05-07
+- 当前激活的功能：无 (idle)
+- 最后更新时间：2026-05-09
 
 ## 术语
 
@@ -29,9 +29,9 @@
 | FEAT-001 | skill-diagnose 存量技能合规性诊断 | planning | P1 | specs/FEAT-001-skill-diagnose/ |
 | FEAT-002 | skill-transform 存量技能标准化改造 | planning | P1 | specs/FEAT-002-skill-transform/ |
 | FEAT-003 | skill-create 集成Anthropic skill-creator | done | P1 | specs/FEAT-003-skill-create/ |
-| FEAT-004 | eval-gen 自动化初始用例生成 | planning | P1 | specs/FEAT-004-eval-gen/ |
-| FEAT-005 | eval-sync 技能迭代与用例自动同步 | planning | P1 | specs/FEAT-005-eval-sync/ |
-| FEAT-006 | eval 标准化Skill评测引擎 | planning | P1 | specs/FEAT-006-eval/ |
+| FEAT-004 | eval-gen 自动化初始用例生成 | done | P1 | specs/FEAT-004-eval-gen/ |
+| FEAT-005 | eval-sync 技能迭代与用例自动同步 | done | P1 | specs/FEAT-005-eval-sync/ |
+| FEAT-006 | eval 标准化Skill评测引擎 | done | P1 | specs/FEAT-006-eval/ |
 | FEAT-007 | init 项目初始化与Skill平铺部署 | planning | P1 | specs/FEAT-007-init/ |
 | FEAT-008 | publish Skill源打包与npm发布 | planning | P2 | specs/FEAT-008-publish/ |
 | FEAT-009 | list Skill列表查看与管理 | planning | P3 | specs/FEAT-009-list/ |

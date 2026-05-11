@@ -35,6 +35,7 @@ export function parseSkillMd(filePath: string): SkillAnchor {
     whenNotToUse: sections.whenNotToUse || '',
     definitionOfDone: sections.definitionOfDone || '',
     whatToBuild: sections.whatToBuild || '',
+    steps: sections.steps || '',
   };
 
   // 校验必填字段
@@ -90,6 +91,7 @@ interface SectionData {
   whenNotToUse?: string;
   definitionOfDone?: string;
   whatToBuild?: string;
+  steps?: string;
 }
 
 function extractSections(content: string): SectionData {
@@ -109,6 +111,9 @@ function extractSections(content: string): SectionData {
 
   // 提取 "What to build" 章节
   result.whatToBuild = extractSection(body, 'What to build');
+
+  // 提取 "Steps" 章节（可选）
+  result.steps = extractSection(body, 'Steps');
 
   return result;
 }

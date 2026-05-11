@@ -1,0 +1,8 @@
+{"timestamp":"2026-05-09T10:04:25.115Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-09T10:06:33.703Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-09T14:00:05.850Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T10:14:16.003Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T10:15:20.837Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:01:46.419Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:13:35.155Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
+{"timestamp":"2026-05-11T14:15:13.762Z","caseId":"test-negative-only-1","eventType":"skill_trigger","detail":{"skillName":"negative-only-skill","shouldTrigger":false},"result":"success"}
